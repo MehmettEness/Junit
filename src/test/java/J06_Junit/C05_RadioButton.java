@@ -33,7 +33,7 @@ public class C05_RadioButton {
 
         //          "radio buttons" elementlerini locate edin
         Thread.sleep(3500);
-       WebElement kadın = driver.findElement(By.xpath("//input[@id='u_n_4_4Q']"));
+    //   WebElement kadın = driver.findElement(By.xpath("//input[@id='u_n_4_4Q']"));
        WebElement erkek = driver.findElement(By.xpath("//input[@id='uu_n_5_1J']"));
 
         //  Secili degilse cinsiyet butonundan size uygun olani secin
