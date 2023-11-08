@@ -28,7 +28,7 @@ public class C03_DropDownMenu {
         b-- selectByIndex() --> Index ile ulaşmak için kullanılır.Burada index 0 dan başlar.
         c-- selectByValue() --> value attribute degeri ile ulaşmak için kullanılır (option tagi ile başlar)
 
-     4-- getOtions() --> Locate ettiğimiz dropdown menüdeki tüm seçenekleri seçer.
+     4-- getOptions() --> Locate ettiğimiz dropdown menüdeki tüm seçenekleri seçer.
      5-- getFirstSelectedOption() --> Dropdown menudeki secili olan seceneği bize verir.
      */
 
