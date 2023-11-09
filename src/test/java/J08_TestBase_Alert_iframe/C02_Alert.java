@@ -22,10 +22,6 @@ public class C02_Alert extends TestBase {
     /*
     https://testcenter.techproeducation.com/index.php?page=javascript-alerts adresine gidin.
 
-
-
-
-
 Bir metod olusturun: sendKeysAlert
        3. butona tıklayın, uyarıdaki  metin kutusuna isminizi yazin, OK butonuna
        tıklayın ve result mesajında isminizin görüntülendiğini doğrulayın.
@@ -70,6 +66,26 @@ Bir metod olusturun: sendKeysAlert
         String unexpectedResultMesaage = "successfuly";
 
         Assert.assertFalse(actualResultMessage.contains(unexpectedResultMesaage));
+
+    }
+
+    //Bir metod olusturun: sendKeysAlert
+    @Test
+    public void sendKeysAlert() {
+
+        driver.get("https://testcenter.techproeducation.com/index.php?page=javascript-alerts");
+        //       3. butona tıklayın, uyarıdaki  metin kutusuna isminizi yazin, OK butonuna
+
+        driver.findElement(By.xpath("//button[3]")).click();
+        waitForSecond(2);
+        driver.switchTo().alert().sendKeys("Enes");
+        driver.switchTo().alert().accept();
+        waitForSecond(2);
+
+        //       tıklayın ve result mesajında isminizin görüntülendiğini doğrulayın.
+        String actualMessage = driver.findElement(By.xpath("(//p)[2]")).getText();
+        Assert.assertTrue(actualMessage.contains("Enes"));
+
 
 
 

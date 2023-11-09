@@ -23,11 +23,11 @@ public abstract class TestBase {
        driver.manage().window().maximize();
        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
    }
-   @After
-   public void tearDown() throws Exception {
-       Thread.sleep(2000);
-       driver.quit();
-   }
+//  @After
+//  public void tearDown() throws Exception {
+//      Thread.sleep(2000);
+//      driver.quit();
+//  }
 
    //Select visible Text Dropdown
     public void selectVisible (WebElement ddm , String option){
@@ -51,6 +51,15 @@ public abstract class TestBase {
             throw new RuntimeException(e);
         }
     }
+    //WİNDOW HANDLE
+        public void window (int index){
+       driver.switchTo().window(driver.getWindowHandles().toArray()[index].toString());
+        }
+
+    //İFRAME HANDLE
+        public void frameIndex (int index){
+       driver.switchTo().frame(index);
+        }
 
     }
 
