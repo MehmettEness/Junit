@@ -4,7 +4,9 @@ import Utilities.TestBase;
 import com.github.javafaker.Faker;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.Locale;
 
@@ -54,29 +56,6 @@ public class C05_FakerTest extends TestBase {
         System.out.println("faker1.name().firstName() = " + faker1.name().firstName());
     }
 
-    @Test
-    public void fakerTest() {
-        Locale locale = new Locale("tr");
-        Faker faker2 = new Faker(locale);
 
 
-        //"https://facebook.com"  Adresine gidin
-        driver.get("https://facebook.com");
-
-        //"create new account"  butonuna basin
-        driver.findElement(By.xpath("//a[.='Yeni hesap oluştur']")).click();
-
-        //"firstName" giris kutusuna bir isim yazin
-        WebElement firstName = driver.findElement(By.xpath("//input[@name='firstname']"));
-        firstName.sendKeys(faker2.name().firstName());
-
-        //"lastname" giris kutusuna bir soyisim yazin
-        //"email" giris kutusuna bir email yazin
-        //"email" onay kutusuna emaili tekrar yazin
-        //Bir sifre girin
-        //Tarih icin gun secin
-        //Tarih icin ay secin
-        //Tarih icin yil secin
-        //Cinsiyeti secin
-    }
 }
