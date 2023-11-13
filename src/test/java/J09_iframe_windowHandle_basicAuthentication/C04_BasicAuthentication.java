@@ -5,7 +5,12 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
+
 public class C04_BasicAuthentication extends TestBase {
+
+
+    //Authentication = Kimlik doğrulama, yetki verme
+
 
     @Test
     public void test01() {
@@ -30,6 +35,7 @@ public class C04_BasicAuthentication extends TestBase {
 
         //Başlığın Elemental Selenium içerdiğini test edelim
         Assert.assertTrue(driver.getTitle().contains("Elemental Selenium"));
+
 
     }
 }
