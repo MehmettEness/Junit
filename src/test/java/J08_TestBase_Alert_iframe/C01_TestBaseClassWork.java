@@ -27,13 +27,16 @@ public class C01_TestBaseClassWork extends TestBase {
 
         //           c. Select object i kullanarak 3 farkli sekilde secim yapiniz
 
-        selectYear.selectByIndex(5);//index 0 dan başlayarak 6. element seçilir
-        selectMonth.selectByValue("4");//value değeri seçilir.
 
-        selectIndex(year , 3);
-        waitForSecond(2);
-        selectVisible(month , "May");
-        selectVisible(day , "10");
+
+
+       selectYear.selectByIndex(5);//index 0 dan başlayarak 6. element seçilir
+       selectMonth.selectByValue("4");//value değeri seçilir.
+
+       selectIndex(year , 3);
+       waitForSecond(2);
+       selectVisible(month , "May");
+       selectVisible(day , "10");
 
     }
 }
