@@ -20,7 +20,7 @@ public class C03_ClassWork8 extends TestBase {
         //"https://facebook.com"  Adresine gidin
         driver.get("https://facebook.com");
 
-        //"create new account"  butonuna basin
+        //"create new account" butonuna basin
         driver.findElement(By.xpath("//a[.='Yeni hesap oluştur']")).click();
 
         //"firstName" giris kutusuna bir isim yazin
