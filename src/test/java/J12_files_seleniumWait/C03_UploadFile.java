@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 
 public class C03_UploadFile extends TestBase {
 
+
     @Test
     public void uploadTest() {
         //https://the-internet.herokuapp.com/upload adresine gidelim
