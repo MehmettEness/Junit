@@ -53,4 +53,30 @@ public class frame02 extends TestBase {
         driver.switchTo().window(handleDeger);
         waitForSecond(2);
     }
+
+    @Test
+    public void test02() {
+        //Aşağıdaki bilgileri kullanarak authentication yapınız:
+        //    Url: https://the-internet.herokuapp.com/basic_auth
+        //    Username: admin
+        //    Password: admin
+        driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
+
+        //    Congratulations! You must have the proper credentials. yazının çıktığını doğrulayın
+        String actual = driver.findElement(By.xpath("//p")).getText();
+        String expected ="Congratulations! You must have the proper credentials.";
+        Assert.assertEquals(actual , expected);
+
+        //Elemental Selenium linkine tıklayınız
+        driver.findElement(By.xpath("//*[.='Elemental Selenium']")).click();
+
+        //Başlığın Elemental Selenium içerdiğini test edelim
+        driver.switchTo().window(driver.getWindowHandles().toArray()[1].toString());
+
+        Assert.assertEquals("Elemental Selenium | Elemental Selenium" , driver.getTitle());
+
+
+
+    }
+
 }
