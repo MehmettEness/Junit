@@ -151,7 +151,7 @@ public class frame01 extends TestBase {
         driver.get("https://www.techproeducation.com");
 
         //Başlığın "TechPro Education IT Programs" olduğunu doğrulayın
-        Assert.assertEquals("TechPro Education IT Programs" , driver.getTitle());
+        Assert.assertEquals("TechPro Education IT Programs", driver.getTitle());
 
         //Window 2'de (yeni bir sekmede) https://www.youtube.com sayfasını açınız:
         driver.switchTo().newWindow(WindowType.TAB);
@@ -171,7 +171,5 @@ public class frame01 extends TestBase {
         window(2);
         waitForSecond(2);
     }
-
-
 
 }
