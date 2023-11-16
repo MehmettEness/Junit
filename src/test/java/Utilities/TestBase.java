@@ -29,11 +29,12 @@ public abstract class TestBase {
 //      driver.quit();
 //  }
 
-   //Select visible Text Dropdown
-    public void selectVisible (WebElement ddm , String option){
-       Select select = new Select(ddm);
-       select.selectByVisibleText(option);
-    }
+
+ //Select visible Text Dropdown
+     public void selectVisible (WebElement ddm , String option){
+        Select select = new Select(ddm);
+        select.selectByVisibleText(option);
+     }
 
     //Select index DropDown
     public void selectIndex(WebElement ddm , int index){
@@ -62,10 +63,3 @@ public abstract class TestBase {
         }
 
     }
-
-
-
-
-
-
-

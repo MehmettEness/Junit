@@ -35,13 +35,6 @@ public class C01_iframe extends TestBase {
         WebElement elemantalSelenium = driver.findElement(By.xpath("//*[.='Elemental Selenium']"));
         Assert.assertEquals("Elemental Selenium" , elemantalSelenium.getText());
 
-
-
-
-
-
     }
-
-
 
 }
