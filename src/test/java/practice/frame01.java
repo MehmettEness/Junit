@@ -162,13 +162,13 @@ public class frame01 extends TestBase {
         driver.get("https://www.linkedin.com");
 
         //techproeducation sayfasına geçiniz:
-        driver.switchTo().window(driver.getWindowHandles().toArray()[0].toString());
+        window(0);
         waitForSecond(2);
         //youtube sayfasına geçiniz:
-        driver.switchTo().window(driver.getWindowHandles().toArray()[1].toString());
+        window(1);
         waitForSecond(2);
         //linkedIn sayfasına geçiniz:
-        driver.switchTo().window(driver.getWindowHandles().toArray()[2].toString());
+        window(2);
         waitForSecond(2);
     }
 
