@@ -140,4 +140,5 @@ public class Prac16_11WindowHandle extends TestBase {
         String expectedYazi = "jQuery Flexy Plugin Demos";
         Assert.assertEquals(actualYazi , expectedYazi);
     }
+
 }
