@@ -48,15 +48,16 @@ public class Prac16_01Actions extends TestBase {
 
         // Change country/region butonuna basiniz
         waitForSecond(2);
-        WebElement country = driver.findElement(By.xpath("((//div[text()='Change country/region.'])[2]"));
+        WebElement country = driver.findElement(By.xpath("(//div[@class='icp-mkt-change-lnk'])[1]"));
         country.click();
         // United States dropdown'undan 'Turkey (Türkiye)' seciniz
         waitForSecond(2);
-        WebElement dropDownMenu = driver.findElement(By.xpath("(//a[@class='a-dropdown-link'])[19]"));
+        WebElement dropDownMenu = driver.findElement(By.xpath("//span[@class='a-dropdown-container']"));
         waitForSecond(2);
         dropDownMenu.click();
         Select select = new Select(dropDownMenu);
         select.selectByVisibleText("Turkey (Türkiye)");
+
         // Go to website butonuna tiklayiniz
         waitForSecond(2);
         driver.findElement(By.xpath("//span[@id='icp-save-button']")).click();
