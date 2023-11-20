@@ -79,8 +79,8 @@ public class C04_ExtendsReportsTest extends TestBase {
         Assert.assertTrue(icons.isDisplayed());
         extentTest.pass("Sosyal medya görünütlemeleri başarılı");
 
+        //bitiş
         extentReports.flush();
-
 
 
     }

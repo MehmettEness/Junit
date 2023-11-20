@@ -13,7 +13,7 @@ public class C03_ExtentReport {
 
     ExtentReports extentReports;//raporlamayi baslatir
 
-    ExtentHtmlReporter extentHtmlReporter;//html formatinda rapor olusuturur
+    ExtentHtmlReporter extentHtmlReporter;//html formatinda rapor olusturur.
 
     ExtentTest extentTest; // Test adimlarina bilgi ekler.
 
@@ -81,8 +81,7 @@ public class C03_ExtentReport {
             //Test sirasinda ciddi bir hata oldugunu belirtir
             extentTest.fatal("Ciddi Hata Mesaji");
 
-
-
+            //bitiş
             extentReports.flush();
 
 
