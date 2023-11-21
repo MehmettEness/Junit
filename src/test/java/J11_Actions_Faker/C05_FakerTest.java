@@ -34,6 +34,7 @@ public class C05_FakerTest extends TestBase {
         System.out.println(emailAdress);
         //faker objesi ile fake bir rastgele 15 haneli bir sayi yazdırınız
         String TcKimlikNo = faker.number().digits(11);
+        System.out.println("TcNo : " + TcKimlikNo);
         //faker objesi ile fake bir isimsoyisim yazdırınız
         String fullName = faker.name().fullName();
         System.out.println(fullName);
