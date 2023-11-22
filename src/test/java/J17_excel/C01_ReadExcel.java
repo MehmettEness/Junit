@@ -12,6 +12,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class C01_ReadExcel {
+    /*
+    projedeki user name ve password leri daha güvenli şekilde kullanırız Çünkü exceli kimse göremez
+    Daha düzenli bir şekilde verileri saklarız. Yani excelden verileri okurken herkes okumakta zorlanmaz ve anlaması daha da kolay olur.
+     */
 
     @Test
     public void test01() throws IOException {
