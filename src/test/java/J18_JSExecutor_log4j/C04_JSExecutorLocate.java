@@ -8,6 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 public class C04_JSExecutorLocate extends TestBase {
+
     @Test
     public void test01() {
         //https://bonigarcia.dev/selenium-webdriver-java/shadow-dom.html   adresine gidelim
@@ -72,5 +73,6 @@ public class C04_JSExecutorLocate extends TestBase {
 
 
     }
+
 
 }
