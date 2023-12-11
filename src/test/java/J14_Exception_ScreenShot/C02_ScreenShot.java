@@ -2,8 +2,7 @@ package J14_Exception_ScreenShot;
 
 import Utilities.TestBase;
 import org.junit.Test;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -20,8 +19,6 @@ public class C02_ScreenShot extends TestBase {
      */
 
 
-
-
     @Test
     public void test01() throws IOException {
 
@@ -30,12 +27,11 @@ public class C02_ScreenShot extends TestBase {
 
 
         //Sayfanin ekran gorunutusunu aliniz
-        String dosyaYolu ="src\\test\\java\\screenShots\\amazon.png";
+        String dosyaYolu = "src\\test\\java\\screenShots\\amazon.png";
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
 
 
-
-        Files.write(Paths.get(dosyaYolu) ,  takesScreenshot.getScreenshotAs(OutputType.BYTES));
+        Files.write(Paths.get(dosyaYolu), takesScreenshot.getScreenshotAs(OutputType.BYTES));
 //              Yaz (kayıt edilecek yer) ,              (bu görünütüyü al)
 
     }
@@ -46,13 +42,12 @@ public class C02_ScreenShot extends TestBase {
         //techproya git
         driver.get("https://techproeducation.com");
         //sayfanın ekran görüntüsünü alınız
-        String dosyaYolu ="src\\test\\java\\screenShots\\techpro.jpeg";
+        String dosyaYolu = "src\\test\\java\\screenShots\\techpro.jpeg";
 
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
 
 
-
-        Files.write(Paths.get(dosyaYolu) ,  takesScreenshot.getScreenshotAs(OutputType.BYTES));
+        Files.write(Paths.get(dosyaYolu), takesScreenshot.getScreenshotAs(OutputType.BYTES));
 
     }
 
@@ -63,7 +58,7 @@ public class C02_ScreenShot extends TestBase {
         //ekran görüntüsü alınız
         String dosyaYolu = "src\\test\\java\\screenShots\\facebook.jpeg";
         TakesScreenshot ts = (TakesScreenshot) driver;
-        Files.write(Paths.get(dosyaYolu),ts.getScreenshotAs(OutputType.BYTES));
+        Files.write(Paths.get(dosyaYolu), ts.getScreenshotAs(OutputType.BYTES));
 
     }
 
@@ -76,11 +71,13 @@ public class C02_ScreenShot extends TestBase {
         //faceboook sayfasına gidiniz
         driver.get("https://www.facebook.com");
         //ekran görüntüsü alınız
-        String dosyaYolu = "src\\test\\java\\screenShots\\"+date+"facebook.jpeg";
+        String dosyaYolu = "src\\test\\java\\screenShots\\" + date + "facebook.jpeg";
         TakesScreenshot ts = (TakesScreenshot) driver;
-        Files.write(Paths.get(dosyaYolu),ts.getScreenshotAs(OutputType.BYTES));
+        Files.write(Paths.get(dosyaYolu), ts.getScreenshotAs(OutputType.BYTES));
 
     }
+
+
 }
 
 

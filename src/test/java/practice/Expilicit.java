@@ -34,4 +34,14 @@ public class Expilicit extends TestBase {
 
 
     }
+
+    @Test
+    public void test02() {
+        driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
+        driver.findElement(By.xpath("//button")).click();
+        WebElement element = driver.findElement(By.xpath("//h4[.='Hello World!']"));
+        new FluentWait<>(driver).withTimeout(Duration.ofSeconds(20)).pollingEvery(Duration.ofMillis(200)).withMessage("Webele veya süreyi kontrol et")
+                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h4[.='Hello World!']")));
+        Assert.assertEquals("Hello World!" , element.getText());
+    }
 }

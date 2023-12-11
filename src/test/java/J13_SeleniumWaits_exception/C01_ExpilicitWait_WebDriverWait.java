@@ -26,7 +26,7 @@ public class C01_ExpilicitWait_WebDriverWait extends TestBase {
                 Sayfa yüklendikten sonra bir webelementin etkileşime girebilmesi için max. belirtmiş olduğumuz süre kadar
                 ve default olarak yarım saniyelik aralıklarla bekler.
 
-                  Ornegin bir webelemente tikladiktan sonra cikan bir webelement yada bir aler cikmasi testimizi
+                  Ornegin bir webelemente tikladiktan sonra cikan bir webelement yada bir alert cikmasi testimizi
                   calistirirken farkli sürelerde olusabilir, Bu süreyi tam olarak belirleyemedigimizden dolayi
                   Thread.sleep () kullanmak profosyonelce olmaz.
                   Bu gibi durumlarda Webdriver wait ile bir webelementin olusmasini bekletmek daha profosyonel ve
@@ -93,5 +93,21 @@ public class C01_ExpilicitWait_WebDriverWait extends TestBase {
 
     }
 
+    @Test
+    public void test03() {
+        //https://the-internet.herokuapp.com/dynamic_loading/1
+        driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
 
+        //Start buttonuna tıkla
+       driver.findElement(By.xpath("//button")).click();
+
+        //Hello World! Yazının sitede oldugunu test et
+        WebElement element = new WebDriverWait(driver, Duration.ofSeconds(20)).until(ExpectedConditions
+                .visibilityOfElementLocated(By.xpath("//h4[.='Hello World!']")));
+        Assert.assertEquals("Hello World!" , element.getText());
+
+
+
+
+    }
 }

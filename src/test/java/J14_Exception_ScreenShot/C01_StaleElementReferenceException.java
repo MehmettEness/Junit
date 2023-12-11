@@ -3,7 +3,11 @@ package J14_Exception_ScreenShot;
 import Utilities.TestBase;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+import java.security.KeyFactorySpi;
 
 public class C01_StaleElementReferenceException extends TestBase {
     /*
@@ -31,6 +35,7 @@ StaleElementReferenceException
 
     @Test
     public void test01() {
+        Actions actions = new Actions(driver);
 
         //amazona gidelim
         driver.get("https://amazon.com");
@@ -48,8 +53,10 @@ StaleElementReferenceException
         WebElement searchBox2 = driver.findElement(By.id("twotabsearchtextbox"));
         //aslında yukardakiyle her ikiside aynı ancak site geri gittiğinde searchBox tek kullanımlıkmış gibi davranıyor.
 
+       // searchBox.sendKeys("desktop");
+       // searchBox.submit();
         searchBox2.sendKeys("desktop");
         searchBox2.submit();
-
+        actions.sendKeys(Keys.END).perform();
     }
 }
