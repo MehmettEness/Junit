@@ -18,7 +18,8 @@ public class C03_WriteExcel {
         Sheet sheet = workbook.getSheet("customer_info");
         Row row = sheet.getRow(0);
 
-        Cell cell = row.createCell(2); //3.sütun başlığını oluşturduk
+        Cell cell = row.createCell(2); //3.s
+        // ütun başlığını oluşturduk
 
         //mysmoketestdata.xlsx dosyasina STATUS adinda ucuncu bir sutun olusturunuz,
         cell.setCellValue("STATUS"); //burada 3 sütuna STATUS adını verdik

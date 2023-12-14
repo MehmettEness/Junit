@@ -18,6 +18,8 @@ public class C03_ExtentReport {
     ExtentTest extentTest; // Test adimlarina bilgi ekler.
 
 
+
+
     @Test
 
     public void extentReportTemplate () {
